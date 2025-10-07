@@ -29,7 +29,9 @@ model = FastLanguageModel.get_peft_model(model, r=16)
 | **[FineTuning LanguageModels](./FineTuning%20LanguageModels/)** | Basic concepts & simple examples | Beginners, students | 1-2 hours |
 | **[FineTuning LargeLanguageModels](./FineTuning%20LargeLanguageModels/)** | Advanced techniques & model-specific guides | Practitioners, researchers | 3-5 hours |  
 | **[FineTuning VisionModel](./FineTuning%20VisionModel/)** | Vision-language model fine-tuning | Computer vision researchers | 2-3 hours |
-| **[RLHF Optimization](./RLHF%20Optimization/)** | Human preference alignment (DPO, RLHF) | Advanced users, alignment researchers | 2-4 hours |
+| **[Advanced FineTuning Methods](./Advanced%20FineTuning%20Methods/)** | Multi-LoRA & LoRA composition techniques | Advanced researchers, ML engineers | 3-4 hours |
+| **[Task Specific FineTuning](./Task%20Specific%20FineTuning/)** | Specialized task fine-tuning (Code generation) | Domain specialists, developers | 2-3 hours |
+| **[Reinforcement Learning Based FineTning](./Reinforcement%20Learning%20Based%20FineTning/)** | Human preference alignment (DPO, RLHF) | Advanced users, alignment researchers | 2-4 hours |
 | **[docs/](./docs/)** | Comprehensive guides & troubleshooting | All skill levels | Reference |
 
 ## 🤔 Which Technique Should I Use?
@@ -47,7 +49,7 @@ model = FastLanguageModel.get_peft_model(model, r=16)
 - ✅ Minimal performance loss
 
 ### **🎯 I Want Better Instruction Following**
-→ Try **[DPO Training](./RLHF%20Optimization/README.md)**
+→ Try **[DPO Training](./Reinforcement%20Learning%20Based%20FineTning/README.md)**
 - ✅ Improves response quality
 - ✅ Better human alignment
 - ✅ No reward model needed
@@ -57,6 +59,18 @@ model = FastLanguageModel.get_peft_model(model, r=16)
 - ✅ Image + text processing
 - ✅ Mathematical formula recognition
 - ✅ Multimodal AI applications
+
+### **🧬 I Need Multiple Domain Expertise**
+→ Try **[Multi-LoRA Methods](./Advanced%20FineTuning%20Methods/README.md)**
+- ✅ Multiple skills without forgetting
+- ✅ Dynamic adapter switching
+- ✅ Combine different expertises
+
+### **💻 I Need Specialized Code Generation**
+→ Use **[Task-Specific Fine-tuning](./Task%20Specific%20FineTuning/README.md)**
+- ✅ Advanced code generation
+- ✅ Multi-language programming support
+- ✅ Optimized with Qwen2.5-Coder
 
 ## 📊 Memory & Performance Guide
 
@@ -99,7 +113,9 @@ pip install "unsloth[cu121-ampere-torch230] @ git+https://github.com/unslothai/u
 1. **Week 1**: [Basic Fine-tuning Concepts](./FineTuning%20LanguageModels/README.md)
 2. **Week 2**: [LoRA and PEFT Techniques](./FineTuning%20LargeLanguageModels/README.md)  
 3. **Week 3**: [Vision-Language Models](./FineTuning%20VisionModel/README.md)
-4. **Week 4**: [Human Preference Alignment](./RLHF%20Optimization/README.md)
+4. **Week 4**: [Human Preference Alignment](./Reinforcement%20Learning%20Based%20FineTning/README.md)
+5. **Week 5**: [Advanced Multi-LoRA Methods](./Advanced%20FineTuning%20Methods/README.md)
+6. **Week 6**: [Task-Specific Applications](./Task%20Specific%20FineTuning/README.md)
 
 ## 🛠️ Technologies
 
@@ -260,7 +276,7 @@ Input → Layer Norm → Adapter → Residual Connection → Output
 
 ## 📁 Repository Structure
 
-This repository contains three specialized folders:
+This repository contains six specialized folders:
 
 ### 📁 [FineTuning LanguageModels/](./FineTuning%20LanguageModels/)
 Foundational fine-tuning techniques and inference examples for beginners.
@@ -268,8 +284,17 @@ Foundational fine-tuning techniques and inference examples for beginners.
 ### 📁 [FineTuning LargeLanguageModels/](./FineTuning%20LargeLanguageModels/)
 Advanced model-specific fine-tuning using UnSloth, LoRA, and quantization techniques.
 
-### 📁 [RLHF Optimization/](./RLHF%20Optimization/)
-Cutting-edge human preference alignment using Direct Preference Optimization (DPO).
+### 📁 [FineTuning VisionModel/](./FineTuning%20VisionModel/)
+Vision-language model fine-tuning for multimodal AI applications.
+
+### 📁 [Advanced FineTuning Methods/](./Advanced%20FineTuning%20Methods/)
+Cutting-edge Multi-LoRA and LoRA composition techniques for multiple domain expertise.
+
+### 📁 [Task Specific FineTuning/](./Task%20Specific%20FineTuning/)
+Specialized fine-tuning for domain-specific tasks like code generation.
+
+### 📁 [Reinforcement Learning Based FineTning/](./Reinforcement%20Learning%20Based%20FineTning/)
+Human preference alignment using Direct Preference Optimization (DPO) and RLHF.
 
 ## 🚀 Getting Started
 
