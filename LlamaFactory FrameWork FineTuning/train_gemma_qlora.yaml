@@ -1,0 +1,37 @@
+model_name_or_path: google/gemma-1.1-2b-it
+
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+
+dataset: alpaca_en_demo            
+template: gemma                     
+cutoff_len: 1024
+max_samples: 1000
+overwrite_cache: true
+preprocessing_num_workers: 4
+
+output_dir: ./gemma_lora_sft_output
+overwrite_output_dir: true
+logging_steps: 10
+save_strategy: epoch
+save_total_limit: 2
+plot_loss: true
+
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 4
+learning_rate: 1e-4
+num_train_epochs: 1
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+fp16: true
+gradient_checkpointing: true        
+quantization_bit: 4                 
+
+ignore_pad_token_for_loss: true
+
+val_size: 0.1
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 200
